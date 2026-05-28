@@ -1,0 +1,40 @@
+% !TEX program = pdflatex
+% PaperbackWriter — Econometrica-flavored template.
+% Replace with official econometrica.cls from econometricsociety.org when submitting.
+
+\documentclass[11pt]{article}
+
+\input{preamble}
+
+\title{Working Title\thanks{Acknowledgements footnote.}}
+\author{Author One\thanks{Affiliation, email.} \and Author Two\thanks{Affiliation, email.}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+
+\medskip\noindent\textit{Keywords:} keyword one, keyword two, keyword three.\\
+\textit{JEL Classification:} D82, D83, C72.
+
+\input{sections/intro}
+
+\input{sections/related}
+
+\input{sections/model}     % \input's from ../proofs/ for formal definitions
+
+\input{sections/results}   % \input's from ../proofs/ for theorem statements
+
+\input{sections/discussion}
+
+\bibliographystyle{econometrica}
+\bibliography{refs}
+
+\appendix
+\input{sections/appendix}  % \input's from ../proofs/ for full proofs
+
+\end{document}
