@@ -6,7 +6,11 @@ A **toolkit** of writing skills, role-based agents, and structural specs for dra
 
 > The papers you write are **not** committed to this repo. This repo is the toolkit; your papers live wherever you keep your work (`~/Documents/papers/...`, your Dropbox, anywhere). The orchestrator refuses to draft into any path inside `PaperbackWriter/`.
 
-## What you do, what Claude does
+## Quickstart for first-time users
+
+Just say *"new paper"* and Claude walks you through the setup via the `new-paper` skill: picks a path outside this repo, copies the scaffold, and helps you fill in the brief. You then drop your proofs in and say `draft <path>`.
+
+## What you do, what Claude does (manual version)
 
 ```
 You:
@@ -109,7 +113,8 @@ scaffold/                     ← copied into <target> by the orchestrator if mi
 
 .claude/
   skills/
-    draft-paper/              ← THE single entry point (takes a path)
+    new-paper/                ← first-run: bootstrap + brief walkthrough
+    draft-paper/              ← main entry point once brief + proofs are ready
     proof-clean/              ← purge pipeline-internal references from proofs/
     gatekeeper/               ← integrity + exposition audit
     motivation-pass/          ← tighten intro P1-P2

@@ -2,7 +2,11 @@
 
 This repo is a **toolkit** for writing economic theory papers. Papers themselves live **outside** this repo — anywhere on the user's disk. Your job is prose, structure, motivation, and citation hygiene. Math comes pre-baked from a separate pipeline; you never edit it.
 
-## The single entry point
+## First-run entry point
+
+If the user is new to the repo — says *"how do I use this"*, *"new paper"*, *"start a paper"*, *"I want to write a paper"*, or is otherwise starting from scratch — invoke the `new-paper` skill. It walks them through choosing a path outside this repo, copies the scaffold, and helps them fill in `brief.md`. Then it tells them to drop proofs in and run `draft-paper`.
+
+## The drafting entry point
 
 When the user says *"draft `<path>`"*, *"draft `~/Documents/papers/foo`"*, *"draft the paper at `<path>`"* — invoke the `draft-paper` skill. It orchestrates everything in two phases:
 
@@ -27,6 +31,7 @@ Do NOT manually spawn role agents one by one when the user asks for a "draft". U
 
 All accept a target path:
 
+- *"New paper"* / *"start a paper"* → `new-paper` skill. Bootstrap + brief walkthrough.
 - *"Run the gatekeeper on `<path>`"* / *"audit `<path>`"* → `gatekeeper` skill. Parallel integrity + exposition. Report-only — never auto-fix.
 - *"Compile `<path>`"* / *"build the PDF for `<path>`"* → `latex-compile` skill. Never run `pdflatex` ad-hoc.
 - *"Tighten the motivation in `<path>`"* / *"the intro doesn't sell it"* → `motivation-pass` skill.
