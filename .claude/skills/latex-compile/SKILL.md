@@ -16,6 +16,14 @@ You should also invoke this skill automatically after every successful pass thro
 
 ## What this skill does
 
+0. **Pre-compile sanitation (harvest-junk guard).** Before building, scan `main.tex` for two artifacts that creep in when a `.tex` was harvested from an LLM/browser response rather than authored in place:
+   - **Trailing junk after the document ends:** any non-whitespace content *after* the first `\end{document}`. This is almost always assistant chatter that followed the code block (e.g. lines like `G. appendix.tex patch`, `Notes`, `No new citation keys were added…`). LaTeX silently ignores it, so the PDF still builds and the problem goes unnoticed — but it pollutes the submission source.
+   - **Leading junk before the preamble:** any non-whitespace content *before* the first `\documentclass` (e.g. a ```` ```latex ```` fence or a "Here is the file:" preamble line).
+
+   If either is present: save a one-time backup `main.tex.bak` (only if it doesn't already exist), strip the offending region, and **report it** — e.g. "Stripped 6 lines of harvest junk after `\end{document}` (backup at `main.tex.bak`)." Do **not** touch anything between `\documentclass` and `\end{document}` — that is the real document. This is the one sanctioned exception to "does not edit `.tex` sources": removing text outside the document body is not editing the paper.
+
+   One-liner that does it (POSIX `sed`): `sed -n '/\\documentclass/,/\\end{document}/p' main.tex` extracts exactly the document; compare line counts to detect junk before acting.
+
 1. Identify the target. If the user names a slug, use `<target>/tex/`. Otherwise look for the most-recently-edited paper directory.
 2. From that `tex/` directory, run the four-pass build:
 
