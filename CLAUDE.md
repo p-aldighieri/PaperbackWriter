@@ -36,6 +36,7 @@ All accept a target path:
 - *"Compile `<path>`"* / *"build the PDF for `<path>`"* → `latex-compile` skill. Never run `pdflatex` ad-hoc.
 - *"Tighten the motivation in `<path>`"* / *"the intro doesn't sell it"* → `motivation-pass` skill.
 - *"Write the related lit for `<path>`"* → `related-literature` skill. Citation universe is locked.
+- *"Check / verify the citations in `<path>`"* / *"crossref the refs"* → `citation-check` skill. Verifies every `refs.bib` entry against Crossref (wrong DOI/year/volume/pages/venue/authors; missing DOIs; working-paper-now-published). Report-only. Run before any "final" compile / submission.
 - *"Clean the proofs in `<path>`"* → `proof-clean` skill. Outputs `_cleaned/` + diff; user reviews before swap.
 
 ## Invoking external models

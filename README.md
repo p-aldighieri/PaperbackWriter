@@ -84,6 +84,7 @@ The orchestrator does one pass. After review, fire individual roles for revision
 
 - *"Tighten the motivation in `<path>`"* → `motivation-pass` skill → `motivation-writer` agent.
 - *"Rewrite the related lit in `<path>`"* → `related-literature` skill.
+- *"Check the citations in `<path>`"* → `citation-check` skill (verify every `refs.bib` entry against Crossref; report-only). Run before any "final" compile / submission.
 - *"Audit `<path>`"* → `gatekeeper` skill (parallel integrity + exposition).
 - *"Compile `<path>`"* → `latex-compile`.
 
@@ -119,6 +120,7 @@ scaffold/                     ← copied into <target> by the orchestrator if mi
     gatekeeper/               ← integrity + exposition audit
     motivation-pass/          ← tighten intro P1-P2
     related-literature/       ← lit review only
+    citation-check/           ← verify every refs.bib entry vs Crossref (report-only)
     latex-compile/            ← build the PDF
   agents/
     abstract-writer.md
