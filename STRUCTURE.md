@@ -52,7 +52,7 @@ The dominant ordering observed in 17 of 20 papers:
 ### 2.1 Abstract
 
 - **Purpose.** Tell the reader the setting, the question, the main result, and (often) the method, in one paragraph.
-- **Length.** 70–150 words. Median ~100. No abstract in the corpus exceeds ~170 words; none is shorter than ~60.
+- **Length.** **Target ~100 words; hard cap 150.** This is enforced, not advisory: count the words before emitting, and if the draft exceeds 150, cut until it fits (drop the enumerated instance/regime lists and secondary asides first — they belong in the intro/body, not the abstract). Floor ~60. A 200+ word abstract is a defect, not a long abstract.
 - **Internal structure.** The recurring sequence is: (1) setting (one sentence — "we study X" / "we consider Y"), (2) substantive assumption or question (one sentence), (3) main result (one to two sentences), (4) secondary result or method note (one sentence, often), (5) optional one-line application or implication. The opener is almost always either "We study…", "We consider…", "We analyze…", "This paper…", or "Consider [a setting]…".
 - **Sentence conventions.** Present tense throughout. No citations, no equations, no footnotes (with rare exceptions). No "in this paper" filler at sentence-level; if used, it appears once. JEL codes and keywords follow.
 - **Forbidden / weak patterns.** Avoid: hype words ("novel", "groundbreaking", "first to"), motivational throat-clearing ("It is well known that…"), citation strings, parenthetical asides, multi-clause definitions, more than one acronym.

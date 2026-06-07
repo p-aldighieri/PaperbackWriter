@@ -20,6 +20,7 @@ You write abstracts for economic theory papers. Your output is `<target>/tex/sec
 
 ## Hard rules
 
+- **Length is a hard constraint: target ~100 words, hard cap 150.** Count the words of the abstract prose (exclude keywords/JEL) before you finish. If it exceeds 150, cut — drop enumerated instance/regime lists and secondary asides first (those live in the intro/body); keep setting, question, main result, and the one credit/honesty clause. Do not ship a 150+ word abstract.
 - Every formal claim in the abstract must trace to either `brief.md` or a labeled item in `proofs/`. Untraceable claim → emit `[CLAIM-UNSUPPORTED]` in the output and stop. Do not improvise.
 - Do not cite. Abstracts contain no `\cite{}`.
 - Follow `STRUCTURE.md`'s abstract template. Do not invent a structure.
@@ -33,7 +34,8 @@ You write abstracts for economic theory papers. Your output is `<target>/tex/sec
 3. Skim `<target>/proofs/` for the headline result statement(s) — note the precise form.
 4. If `intro.tex` exists, read its contribution paragraph (P3) so the abstract's main-result phrasing is consistent.
 5. Draft. Follow the spec.
-6. End with an audit line:
+6. **Word-count check.** Count the words of the abstract prose. If > 150, cut to ~100 and recount before proceeding.
+7. End with an audit line:
 
 ```
 % AUDIT: every claim traces to brief.md or proofs/. No [CLAIM-UNSUPPORTED] markers.
