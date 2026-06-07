@@ -49,6 +49,14 @@ The dominant ordering observed in 17 of 20 papers:
 
 ## 2. Section-by-section spec
 
+### 2.0 Title
+
+- **Purpose.** Name the object, result, or phenomenon in a compact noun phrase — not a sentence, not a method dump. The reader should be able to say it aloud and remember it.
+- **Length (corpus-derived, enforced).** Across the 20-paper corpus: median **5–6 words**, mean 5.6, 75% are ≤6 words, 90% ≤8, and **none exceeds 11**. So: **target ≤8 words; hard cap 12.** Count the words (a colon-separated subtitle counts toward the total). Over 12 → cut. The main phrase before any colon should be ≤6–7 words. A 15-word title with two stacked noun phrases is a defect.
+- **Subtitle discipline.** Only **3 of 20** titles use a colon subtitle, and each is short and earns it ("Dynamic Mechanism Design: A Myersonian Approach", "Credible Auctions: A Trilemma"). Default to **no subtitle**. Use one only when it adds a genuine qualifier (the method, the twist, the scope) and the total still fits the cap. Never use the colon to glue together two long noun-stacks (e.g. "The X Channel in A B C: Semiparametric (In)efficiency of D Estimation under E Transitions" — that is two titles, not one).
+- **Style.** Prefer naming the phenomenon over describing the exercise: "Bayesian Persuasion", "Selling Information", "Suspense and Surprise", "The Limits of Price Discrimination". Avoid "On the …", "A Note on …", "Toward a …". At most one acronym, and only if it is the paper's own coined object; spell out method names ("Temporal-Difference", "Semiparametric") only if they survive the word budget. Drop hedges and qualifiers ("under …", "with …", "in the presence of …") unless load-bearing.
+- **Corpus anchors.** Short (the norm): "Robustness and Linear Contracts" (4), "Maximal Revenue with Multiple Goods" (5), "Cheap Talk with Transparent Motives" (5). Longest acceptable: "Bayes Correlated Equilibrium and the Comparison of Information Structures in Games" (11). Nothing longer appears.
+
 ### 2.1 Abstract
 
 - **Purpose.** Tell the reader the setting, the question, the main result, and (often) the method, in one paragraph.

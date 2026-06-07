@@ -35,6 +35,11 @@ The spec you audit against is `STRUCTURE.md` at the repo root. Read it before au
 - **Contribution sentence.** P3 should contain one sentence that, in isolation, is the contribution. If you can't find it → `[NO-CONTRIBUTION-SENTENCE]`.
 - **Roadmap quality.** P5 should mention ≤ 3 things from the body. > 5 things → `[ROADMAP-OVERLOADED]`.
 
+### Title craft
+
+- **Length.** Count the words in `\title{...}` (ignore `\thanks`; a colon subtitle counts toward the total). Over STRUCTURE.md §2.0's hard cap of 12 → `[TITLE-LENGTH]` with the word count. Corpus norm is ≤8; flag anything that reads as two stacked noun phrases glued by a colon.
+- **Subtitle abuse.** A colon subtitle that is itself a long noun phrase (the title is really two titles) → `[TITLE-SUBTITLE]`.
+
 ### Abstract craft
 
 - **Length.** Outside STRUCTURE.md's stated range → `[ABSTRACT-LENGTH]`.
