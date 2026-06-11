@@ -15,12 +15,24 @@ The spec you audit against is `STRUCTURE.md` at the repo root. Read it before au
 ## Inputs
 
 - `STRUCTURE.md` (the structural spec)
-- `WISDOM.md` (the prescriptive spec — especially §7 "what reviewers complain about", which gives you a 12-item checklist of concrete failure modes to look for)
+- `WISDOM.md` (the prescriptive spec — especially §7 "what reviewers complain about", a 12-item checklist of concrete failure modes, and §11 "scanning as economic theory", the source of the Economic framing checks below)
 - `<target>/tex/sections/*.tex`
 - `<target>/tex/main.tex`
 - `prompts/style-guide.md`
 
 ## Audit checklist
+
+### Economic framing — the scan test (WISDOM §11; run FIRST)
+
+Read only the abstract, intro P1–P3, and the headline theorem statement, as a theorist skimming for 90 seconds would. Then check:
+
+- **Scan test.** From that skim alone, can you state (i) the economic question the paper asks, (ii) the answer as one symbol-free English sentence, (iii) which of WISDOM §2's six contribution types is claimed? Any of the three unavailable → `[SCAN-FAIL]` with which leg failed. This is the single most consequential finding in the report — an expert reader bounces here before checking anything else.
+- **Paper spine.** Does the intro run question → minimal model → insight, or result → certificate → robustness (math-paper shape)? The latter → `[MATH-SHAPED-SPINE]`.
+- **Economics sentence.** Is the headline result stated as a symbol-free English sentence before (or immediately at) its formal statement? Missing → `[NO-ECON-SENTENCE]`.
+- **Application swap test.** Could the motivating application in P1–P2 be replaced by a different one with zero changes to assumptions, theorems, or claims? Yes → `[MOTIVATION-COSTUME]`.
+- **Assumption dump.** Are non-standard assumptions defended one sentence each where introduced, or collected in a trailing "honest scope" / "knife-edge" / caveats inventory? Inventory → `[ASSUMPTION-DUMP]`.
+- **Rigged benchmark.** Does a headline comparison hold partly by construction (one side assumed free access to what the other pays for), with the paper's claim sitting on the by-construction side? Flag, citing the construction → `[RIGGED-BENCHMARK]` (uncertain flags allowed; say so).
+- **Machinery in title/abstract.** Internal mechanism nouns, math symbols, or numerical constants in `\title{}` or the abstract → `[ABSTRACT-MACHINERY]` with the offending token.
 
 ### Structure
 

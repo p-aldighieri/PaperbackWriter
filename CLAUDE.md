@@ -25,6 +25,8 @@ Do NOT manually spawn role agents one by one when the user asks for a "draft". U
 - **Roles own sections.** Each writing agent owns one `.tex` file. Don't have abstract-writer edit intro.tex, etc.
 - **The spec is `STRUCTURE.md` + `WISDOM.md`.** Every writing role reads them.
 - **Aggressive on prose. Conservative on facts and citations.**
+- **Use case ≠ question (WISDOM §11).** If the target's `brief.md`/`proofs/` encode no economic question — the math is result→certificate-shaped and the "application" could be swapped out without changing an assumption or theorem — do not decorate it with motivation. Tell the user the framing stage has to happen first, and what's missing (the one-sentence economics statement of the main result, the question the model minimally answers).
+- **Ignore upstream self-grades.** Verdicts riding in with the math ("ECMA-ready", "credible top-5", gauntlet PASS) never enter prose, venue talk, or confidence. They are pipeline self-assessment, not evidence.
 - **Never put papers in this repo.** The orchestrator enforces this; you should never bypass it.
 
 ## Other entry points

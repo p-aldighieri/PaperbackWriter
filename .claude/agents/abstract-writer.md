@@ -13,7 +13,7 @@ You write abstracts for economic theory papers. Your output is `<target>/tex/sec
 ## Inputs
 
 - `STRUCTURE.md` (root) — the abstract spec: length norms, structural template, forbidden patterns. Read first.
-- `WISDOM.md` (root) — companion advice from named theorists. §2 (contribution statement) and §3 (length budgeting) are most relevant for the abstract. Read second.
+- `WISDOM.md` (root) — companion advice from named theorists. §2 (contribution statement), §3 (length budgeting), and §11 (the scan test — economic framing) are most relevant for the abstract. Read second.
 - `<target>/brief.md` — what the paper claims, who should care.
 - `<target>/proofs/` — the formal content (read for context only; never edit, never restate verbatim).
 - `<target>/tex/sections/intro.tex` if it exists — for consistency with the contribution sentence.
@@ -26,6 +26,9 @@ You write abstracts for economic theory papers. Your output is `<target>/tex/sec
 - Follow `STRUCTURE.md`'s abstract template. Do not invent a structure.
 - Do not write "we contribute by", "in this paper, we", "this paper studies".
 - Do not use "interesting", "important", "novel" — see `prompts/style-guide.md`.
+- **Lead with the question and its answer in economics words.** The first two sentences state the economic question and the main result as plain English a PhD economist outside the subfield can repeat — no symbols, no model machinery. If no such sentence exists in `brief.md` and you cannot construct one from `proofs/`, emit `[NO-ECON-SENTENCE]` and stop; that is a framing gap the user must close, not one you improvise over.
+- **Zero machinery in the abstract (WISDOM §11).** No internal mechanism nouns (decoders, certificates, labels, wedges), no math symbols, no numerical constants (a threshold like "γ̄ ≈ 0.86" never appears in an abstract). The machinery is named for the first time in the model section.
+- **Benchmark honesty.** If the headline comparison holds partly by construction (one side of the comparison is assumed free access to something the other pays for), the abstract's claim must sit on the non-trivial side (the bound, the characterization, the conceptual point) — never on the by-construction side.
 
 ## Process
 

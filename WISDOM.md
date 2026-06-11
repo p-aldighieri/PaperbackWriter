@@ -162,6 +162,26 @@ Five rules that recur across every source:
 4. **Take responsibility for your claims.** Cochrane's diagnosis: passive voice, "it should be noted," and front-loaded literature reviews are all evasions. Active voice, "I" or "we," and direct claims are not stylistic preferences — they are the visible sign that the author is willing to be wrong on the record.
 5. **Imagine a specific reader.** McCloskey: pick someone with high standards and write to them. Shapiro: write for a robot — linear, plain, formal, unimpressed by fancy talk. Bellemare: an audience of PhD economists outside your subfield. The constraint forces precision.
 
+## 11. Scanning as economic theory — field notes from expert reads of generated drafts
+
+Provenance differs from the rest of this document: not the advice literature, but the post-mortem of an expert theorist's read of two pipeline-generated drafts (June 2026), which "did not scan as economic theory papers." These are the failure modes specific to papers whose math arrives pre-baked from a proving pipeline, and they are detectable within one page — before any proof is checked.
+
+**The contract.** An economic theory paper runs *question → minimal model → insight*: an economic question stated first, a model presented as the minimal vehicle for that question, theorems that answer it in economic terms. A math or CS paper runs *result → certificate → robustness*. Drafts whose math was produced first default to the second shape, and a theorist pattern-matches the shape instantly. Rewording cannot fix this; the paper's spine must be rebuilt around the question — or, if no economic question exists, that fact must be escalated to the author, not papered over.
+
+**The scan test (run before anything ships).** Hand the abstract, intro P1–P3, and the headline theorem statement to an imagined theorist for 90 seconds. They must be able to answer: (i) what economic question does the paper ask; (ii) what is the answer, in one English sentence with no symbols; (iii) which contribution type from §2's six-item list is being claimed. Any unavailable answer means the draft does not scan as economics.
+
+**The main result must exist as an economics sentence.** Somewhere before its formal statement, the headline result must appear as one sentence a PhD economist outside the subfield could repeat at lunch — e.g., "receiver control reshapes the value of persuasion but never the form of the optimal experiment." If no such sentence can be written, the result has not yet been understood as economics. That is a framing debt owed by the author, not a prose gap a writer can fill.
+
+**Use case ≠ question.** Bolting an application (credit ratings, loan rollovers) onto a math-shaped result is the generated-paper version of Bellemare's bait-and-switch (§1, §7), and it is detected as fast. The swap test: could a different application replace this one with zero changes to the assumptions, the theorems, or the abstract's claims? If yes, the application is a costume — either cut it or rebuild the model so the application disciplines at least one assumption, one comparative static, or one interpretation the abstract actually uses.
+
+**Assumptions are standard or defended — once, in place.** Every non-standard assumption gets one sentence of defense where it is introduced (§7, item 6) — not five paragraphs, not zero, and never a trailing "honest scope" / "knife-edge cases" inventory. A collected caveats dump tells the referee the model was built backwards from the theorem. If an assumption exists only to make the proof go through and has no economic defense, that is information for the *author* about the model; prose cannot absorb it.
+
+**Benchmark honesty.** When a headline comparison is partially true by construction — e.g., the favored institution in the model gets free access to information the rival must pay to acquire — the paper must say so itself and relocate the claimed contribution to the non-trivial side (the converse bound, the characterization, the conceptual identification). A referee who discovers a rigged benchmark on their own rejects the paper; a paper that points it out first keeps the referee's trust.
+
+**Title and abstract carry zero machinery.** No internal mechanism nouns (decoders, certificates, labels, wedges, kernels-as-objects), no math symbols, no numerical constants. A numerical threshold in an abstract ("γ̄ ≈ 0.8582") is an instant tell that no economist framed the result. The abstract states the question and the answer in words; the machinery is named for the first time in the model section.
+
+**Upstream pipeline verdicts are not evidence.** Self-grades attached to the incoming math ("ECMA-ready", "credible top-5", "gauntlet PASS 9/9") are produced by the same class of system that produced the proofs. They must never shape venue claims, adjectives, or confidence in the prose. Treat the math as given and every assessment of its importance as unestablished until the human author says otherwise.
+
 ---
 
 ## Sources

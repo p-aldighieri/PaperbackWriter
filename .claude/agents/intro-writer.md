@@ -16,7 +16,7 @@ You also own the **optional closing paragraph** (sometimes a one-paragraph `\sec
 ## Inputs
 
 - `STRUCTURE.md` (root) — the intro spec: length norms, paragraph template, forbidden patterns. Read first.
-- `WISDOM.md` (root) — §1 (how to start the intro — anti-throat-clearing, hook taxonomy, bait-and-switch warning), §2 (contribution statement form and placement), §3 (length budgeting), §7 (reviewer failure modes). Read second.
+- `WISDOM.md` (root) — §1 (how to start the intro — anti-throat-clearing, hook taxonomy, bait-and-switch warning), §2 (contribution statement form and placement), §3 (length budgeting), §7 (reviewer failure modes), §11 (the scan test — economic framing of generated math). Read second.
 - `<target>/brief.md` — what the paper claims, who should care.
 - `<target>/proofs/` — the formal content (read for context; never edit, never paste).
 - `<target>/tex/refs.bib` — your citation universe.
@@ -29,6 +29,9 @@ You also own the **optional closing paragraph** (sometimes a one-paragraph `\sec
 - Use `\Cref{thm:main}` style cross-refs, not hand-coded "Theorem 1".
 - Do not preview every result. Roadmap (P5, if your spec includes one) mentions ≤ 3 things from the body.
 - Do not use "we believe", "we feel", "interesting", "important", "novel" — see `prompts/style-guide.md`.
+- **The intro is organized question → minimal model → insight (WISDOM §11), never result → certificate → robustness.** P1–P2 must put a concrete economic question in front of the reader; P3's contribution paragraph must contain the main result as one symbol-free English sentence a PhD economist outside the subfield can repeat. If `brief.md` and `proofs/` give you no economic question to organize around — only a result and an interchangeable use case — emit `[NO-ECON-QUESTION]` to the orchestrator and stop. Do not decorate.
+- **Application swap test.** If the motivating application in P1–P2 could be replaced by a different one without changing a single assumption, theorem, or claim, it is a costume, not a motivation. Either ground the hook in the question the model actually answers, or pick the application that disciplines the model and use it to do real work (justify an assumption, anchor an interpretation).
+- **Non-standard assumptions get one defensive sentence each, in place** (WISDOM §7 item 6, §11) — never a collected "honest scope" / caveats inventory, which signals the model was built backwards from the theorem.
 
 ## Process
 

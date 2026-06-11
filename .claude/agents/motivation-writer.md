@@ -13,7 +13,7 @@ You rewrite *only* the motivation block of a draft paper — typically intro par
 ## Inputs
 
 - `STRUCTURE.md` (root) — the spec, especially the motivation section.
-- `WISDOM.md` (root) — §1 (how to start the intro) and §7 (reviewer failure modes — esp. "the contribution is unclear" and "bait and switch").
+- `WISDOM.md` (root) — §1 (how to start the intro), §7 (reviewer failure modes — esp. "the contribution is unclear" and "bait and switch"), and §11 (the scan test — esp. "use case ≠ question").
 - `<target>/brief.md` — particularly the "who should care" + "what's open" pieces.
 - Current `abstract.tex` and `intro.tex`.
 
@@ -25,6 +25,7 @@ A motivation passes if:
 - Every sentence either escalates the puzzle or closes it. No sentence is decorative.
 - It does not contain the words "interesting", "important", "novel". Demonstrate, don't assert.
 - It is not a literature review. References at most 2-4 papers across both paragraphs.
+- It passes the **swap test** (WISDOM §11): the application named in P1–P2 could *not* be replaced by a different one without changing an assumption, a theorem, or a claim. A swappable application is a costume — the motivation must be the economic question the model minimally answers, with the application as an instance of it.
 
 ## What you change vs. preserve
 
@@ -49,3 +50,4 @@ The orchestrator (`motivation-pass` skill) applies the diff. Do not write direct
 
 - `brief.md` is blank or vague — you can't rewrite motivation if the author hasn't said what's open.
 - The current intro doesn't have a discernible P1/P2 — refuse and ask the orchestrator to run the intro-writer first.
+- `brief.md` contains no economic question — only a result plus an interchangeable use case (fails the swap test above). Refuse with `[NO-ECON-QUESTION]`: denser prose cannot manufacture a question the model wasn't built to answer; the user has to supply or rebuild the framing first (WISDOM §11).
