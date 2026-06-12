@@ -57,6 +57,18 @@ If `$TARGET/proofs/_cleaned/` does not exist or is older than the newest file in
 
 If the user wants to proceed without cleaning, that's their call. Note it in the report.
 
+## Phase 0 — framing (autonomous; no pause)
+
+Run the WISDOM §11 scan test on `$TARGET/brief.md` against the headline result in `$TARGET/proofs/`:
+
+- Does the brief state an **economic question**?
+- Does it contain the **main result as one symbol-free English sentence**?
+- Does any named application pass the **swap test** (it could not be replaced without changing an assumption, theorem, or claim)?
+
+If all three pass, note "Phase 0: brief passed scan test" in the report and move on.
+
+If any fails, spawn the `framing-writer` agent with `$TARGET`. It works backwards from the headline theorem to the question it answers, backs up `brief.md` → `brief.original.md`, rewrites `brief.md`, and records the derivation in `$TARGET/notes/derived-framing.md`. **Do not pause for the user** — this phase is autonomous by design. Note in the report: "Phase 0: framing derived (brief.md rewritten; original preserved; see notes/derived-framing.md)".
+
 ## Phase 1 — parallel
 
 Spawn the following roles **in parallel** (one tool turn, two Agent tool calls). Pass each agent the absolute `$TARGET` path so it knows where to read/write:
@@ -110,6 +122,9 @@ A structured report at the end:
 ```
 ## draft-paper report — $TARGET — <timestamp>
 
+### Phase 0
+- scan test: passed / framing derived (see notes/derived-framing.md)
+
 ### Phase 1
 - $TARGET/tex/sections/model.tex: N lines, M markers
 - $TARGET/tex/sections/related.tex: N lines, M markers
@@ -137,7 +152,7 @@ A structured report at the end:
 - **Do not skip the Phase 1 review pause** unless the user explicitly says "go through without stopping."
 - **Do not generate citations outside the locked universe.**
 - **Do not invent results, lemmas, or proof steps.** If a role emits `[MATERIAL GAP]`, surface it and stop that role's section.
-- **Do not overwrite files in `$TARGET` that already exist** (other than the section .tex files, which are the roles' job).
+- **Do not overwrite files in `$TARGET` that already exist** (other than the section .tex files, which are the roles' job; exception: Phase 0's `framing-writer` may rewrite `brief.md` after backing it up to `brief.original.md`).
 
 ## What this skill does NOT do
 

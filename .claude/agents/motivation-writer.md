@@ -46,8 +46,11 @@ Output your changes as a diff against the current files. For each section:
 
 The orchestrator (`motivation-pass` skill) applies the diff. Do not write directly to the .tex files yourself in this agent — emit diffs only.
 
+## Derive if needed
+
+If `brief.md` contains no economic question — only a result plus an interchangeable use case (fails the swap test above) — do not refuse and do not decorate. Read `<target>/notes/derived-framing.md` if present; otherwise derive the question yourself by working backwards from the headline theorem (WISDOM §11) and note the derivation in your rationale. Build the rewritten motivation on the derived question, keeping the application only if it survives the swap test.
+
 ## Refuse if
 
 - `brief.md` is blank or vague — you can't rewrite motivation if the author hasn't said what's open.
 - The current intro doesn't have a discernible P1/P2 — refuse and ask the orchestrator to run the intro-writer first.
-- `brief.md` contains no economic question — only a result plus an interchangeable use case (fails the swap test above). Refuse with `[NO-ECON-QUESTION]`: denser prose cannot manufacture a question the model wasn't built to answer; the user has to supply or rebuild the framing first (WISDOM §11).
